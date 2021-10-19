@@ -13,10 +13,11 @@ steps:
 #do the same with another action (actions/setup-java@v2) that
 enable to setup jdk 11
 
-  - name: Setup Java JDK 
+  - name: Setup Java JDK
     uses: actions/setup-java@2.3.1
     with:
     java-version:'11'
+    distribution: 
 #finally build your app with the latest command
   - name: Build and test with Maven
     run: mvn -B package --file simple-api/pom.xml
